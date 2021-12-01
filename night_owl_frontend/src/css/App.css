@@ -1,155 +1,167 @@
 @import url('./variables.css');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
 
-body{
-    background-color: var(--color-neutral-90);
-    color: var(--color-neutral-100);
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    font-family: Inter, sans-serif;     
+body {
+	background-color: var(--color-neutral-90);
+	color: var(--color-neutral-100);
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: Inter, sans-serif;
 }
 
-.loader{
-    color:  var(--color-neutral-10) !important;
+.loader {
+	color: var(--color-neutral-10) !important;
 }
 
-.header{
-    background-color: var(--color-brand);
-    top: 0;
-    position: sticky;
-    display: flex;
-    justify-content: space-between;
+.header {
+	background-color: var(--color-brand);
+	top: 0;
+	position: sticky;
+	display: flex;
+	justify-content: space-between;
 }
 
-.header-add-button{
-    margin-right: 1rem;
-    margin-top: 0.9rem;
-    display: flex;
-    align-items: center;
-    width: 4rem;
-    height: 2rem;
-    background-color: var(--color-neutral-100);
-    border: 1rem solid var(--color-neutral-100);
-    border-radius: 0.5rem;
-    color: var(--color-neutral-10);
+.header-add-button {
+	margin-right: 1rem;
+	margin-top: 0.9rem;
+	display: flex;
+	align-items: center;
+	width: 4rem;
+	height: 2rem;
+	background-color: var(--color-neutral-100);
+	border: 1rem solid var(--color-neutral-100);
+	border-radius: 0.5rem;
+	color: var(--color-neutral-10);
 }
-.header-add-button:hover{
-    background-color: var(--color-neutral-10);
-    color: var(--color-neutral-100);
-     width: 4rem;
-    height: 2rem;
-    border: 1rem solid var(--color-neutral-10);
+.header-add-button:hover {
+	background-color: var(--color-neutral-10);
+	color: var(--color-neutral-100);
+	width: 4rem;
+	height: 2rem;
+	border: 1rem solid var(--color-neutral-10);
 }
-.header-title{
-        font-size: var(--fs-lg);
-        margin-top: 0;       
-        padding: 0.6rem 1rem;
+.header-title {
+	font-size: var(--fs-lg);
+	margin-top: 0;
+	padding: 0.6rem 1rem;
 }
-.header-title-anchor{
- color: var(--color-neutral-100);
- 
-}
-
-.list-book{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    grid-gap: 1rem;
-   
-    margin: 2rem auto;
-    justify-content: center;
+.header-title-anchor {
+	color: var(--color-neutral-100);
 }
 
-.book{
-    width:15rem;
-    border: solid 1px var(--color-neutral-60);
-    border-radius: 1rem;  
-    padding: 0.6rem 1rem;
-    background-color: var(--color-neutral-80);
-   cursor: pointer;
-   transition: all 0.3s ease-in-out;
+.list-book {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	grid-gap: 1rem;
+
+	margin: 2rem auto;
+	justify-content: center;
 }
-.book:hover{
-    border-width: 3px;
-    border-color: var(--color-neutral-40);
-    transform: scale(1.05);
-    
+
+.book {
+	width: 15rem;
+	border: solid 1px var(--color-neutral-60);
+	border-radius: 1rem;
+	padding: 0.6rem 1rem;
+	background-color: var(--color-neutral-80);
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
 }
-.book-title{
-    color: var(--color-neutral-10);
+.book:hover {
+	border-width: 3px;
+	border-color: var(--color-neutral-40);
+	transform: scale(1.05);
 }
-.book-cover{
-    width: 100%;
-    height: auto;
+.book-title {
+	color: var(--color-neutral-10);
 }
-.book-desc{
-    font-size: var(--fs-sm);
+.book-cover {
+	width: 100%;
+	height: auto;
+}
+.book-desc {
+	font-size: var(--fs-sm);
+	color: var(--color-neutral-40);
+}
+.book-author {
+	color: var(--color-neutral-20);
+	margin-top: 0;
+}
+a {
+	text-decoration: none !important;
+}
+.individual {
+	display: flex;
+	justify-content: center;
+	margin: 2rem;
+}
+.individualbook {
+	display: flex;
+	grid-gap: 2rem;
+	flex-wrap: wrap;
+}
+.individualbook-title {
+	color: var(--color-neutral-10);
+}
+.individualbook-desc {
+	color: var(--color-neutral-40);
+}
+.individualbook-cover {
+	color: var(--color-neutral-10);
+}
+.individualbook-pages {
     color: var(--color-neutral-40);
 }
-.book-author{
-color: var(--color-neutral-20);
-margin-top: 0;
+.individualbook-author {
+    color: var(--color-neutral-10);
 }
-a{
-    text-decoration: none !important;
+.individualbook-sub1 {
+	display: flex;
+	flex-direction: column;
 }
-.individual{
-    display: flex;
-    justify-content: center;
-    margin: 2rem;
-}
-.individualbook{
-    display: flex;
-    grid-gap: 2rem;  
-    flex-wrap: wrap;  
-}
-.individualbook-title{
-
-}
-.individualbook-desc{
-
-}
-.individualbook-cover{
-
-}
-.individualbook-pages{
-
-}
-.individualbook-author{
-
-}
-.individualbook-sub1{
-    display: flex;
-    flex-direction: column;
+.individualbook-isbn{
+    color: var(--color-neutral-40);
 }
 
-.modal-header{
-    border: 0;
+.individualbook-rating{
+   color: var(--color-neutral-40); 
 }
-h4{
-    font-size: var(--fs-md);
-}
-
-label{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: var(--fs-sm);
-}
-input{
-    font-size: var(--fs-rg);
+strong{
+    color: var(--color-neutral-30);
 }
 
-.modal-error-text{
-    color: darkred;
-    font-size: var(--fs-xs);
-}
-.btn-outline-primary:hover{
-    color: var(--color-neutral-10) !important;
-}
-.btn-primary:hover{
-    background-color: var(--color-neutral-10);
-    color: blue;
+.individualbook-category{
+    color: var(--color-secondary); 
+    background-color:  rgba(var(--color-secondary-rgb), 0.2);
 }
 
+.modal-header {
+	border: 0;
+}
+h4 {
+	font-size: var(--fs-md);
+}
+
+label {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: var(--fs-sm);
+}
+input {
+	font-size: var(--fs-rg);
+}
+
+.modal-error-text {
+	color: darkred;
+	font-size: var(--fs-xs);
+}
+.btn-outline-primary:hover {
+	color: var(--color-neutral-10) !important;
+}
+.btn-primary:hover {
+	background-color: var(--color-neutral-10);
+	color: blue;
+}
