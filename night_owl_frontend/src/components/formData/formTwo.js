@@ -68,7 +68,7 @@ const FormTwo = ({
 
                             </button>
                         </Col>
-                        <Col md={6} className="d-flex justify-content-center " xs={12}>
+                        <Col md={6} className="mt-3 mt-md-0 d-flex justify-content-center " xs={12}>
                             <button className="btn flex-fill  btn-primary " type="submit">
                                 Add one
                             </button>

@@ -10,7 +10,7 @@ import { getBookById } from "../data/apiCall/getABookById";
 
         async function getTheData(){
             const result = await getBookById(param.id);
-           console.log(result);
+
             if(result && result.status && result.status === 200){
                 setbookDetails(result.data.book_details[0]);
                 setrating(result.data.rating[0].rating)
@@ -26,7 +26,7 @@ import { getBookById } from "../data/apiCall/getABookById";
             
         }, []);
         if(loader){
-            return <div className="loader">Loading....</div>;
+            return <div className="text-center loader">Loading....</div>;
         }
         return(
         <div className="individual">
@@ -35,32 +35,37 @@ import { getBookById } from "../data/apiCall/getABookById";
                 <div className="individualbook">
                     <div className="individualbook-sub1">
                         <img 
-                        className="individualbook-cover"
+                        className="img-fluid individualbook-cover"
                         src={bookDetails.cover}
                         alt={`${bookDetails.title} cover image`} 
                         aria-label={`${bookDetails.title} by ${bookDetails.author_name}`}
                         />
                         <a 
-                        className="individualbook-lookMore"
+                        className="btn btn-outline-warning mt-3 individualbook-lookMore"
                         target="_blank" 
                         href={`${bookDetails.website}`}>
                             Look more
                         </a>
                     </div>
                     <div>
-                        <h2 className="individualbook-title">
+                        <h2 className="mt-3 individualbook-title">
                             {` ${bookDetails.title}`}
                         </h2>
-                        <p className="individualbook-author">
-                        {`by ${bookDetails.author_name}`}
+                        <p className=" individualbook-author">
+                        by 
+                        <strong> {`${bookDetails.author_name}`}</strong>
                         </p>
                         <p className="individualbook-rating">
-                        {`Rating: ${rating}/5`}
+                        Rating: 
+                        <strong> {`${rating}/5`}</strong>
                         </p>
-                        <p className="individualbook-category">
+                        <p className="ps-2 rounded individualbook-category">
                         {` ${bookDetails.categories}`}
                         </p>
-                        <p className="individualbook-pages">
+                         <p className="individualbook-isbn border-top border-secondary pt-3">
+                            {`ISBN: ${bookDetails.isbn}`}
+                        </p>
+                        <p className="individualbook-pages border-secondary border-bottom pb-3">
                             {`Pages: ${bookDetails.pages}`}
                         </p>
                         <p className="individualbook-desc">

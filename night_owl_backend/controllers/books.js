@@ -28,7 +28,7 @@ const getById = async (request,response)=>{
 }
 
 const addBook = async (request,response)=>{
-    console.log(request.body);
+    
     const{
         title,
         author_name,
@@ -42,7 +42,7 @@ const addBook = async (request,response)=>{
         const category_ID = await db.query(`
         select id from dev.categories where name = "${categories}"
         `);
-        console.log(category_ID.data[0].id)
+       
         const res = await db.query(
            ` 
            insert into dev.books 
@@ -73,7 +73,7 @@ const addBook = async (request,response)=>{
             )
         `)
         
-        response.status(res.statusCode).json({"message":"success"});
+        response.status(res.statusCode).json({"book_id":book_id.data[0].id});
     }catch(e){     
         
         response.status(500).json(e);
